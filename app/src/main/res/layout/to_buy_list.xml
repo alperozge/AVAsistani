@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.example.alperozge.avasistani.appdata.vievmodel.OnAvailableListsClicked"/>
+        <variable
+            name="toBuyList"
+            type="com.example.alperozge.avasistani.appdata.dbentity.ToBuyList" />
+        <variable
+            name="callback"
+            type="OnAvailableListsClicked" />
+
+        <variable
+            name="isSelected"
+            type="boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/to_buy_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/recview_background"
+        android:gravity="center"
+        android:onClick="@{() -> callback.callback(toBuyList)}"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_alisveris_arabasi" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+
+            android:paddingLeft="4dp"
+            android:text="@{toBuyList.listName}"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Market" />
+
+        <TextView
+            android:id="@+id/to_buy_items_cout_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/colorSecondaryText"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:text="@{@string/list_items_count_text(toBuyList.toBuyItemsCount)}"
+            tools:text="8 Alisveris Kalemi"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

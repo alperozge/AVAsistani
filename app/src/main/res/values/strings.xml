@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">AVAsistani</string>
+
+    <string name="db_name">avlist_dbase.db</string>
+    <string name="need_create_db">need_create_db</string>
+    <string name="smthing_went_wrong">Bir hata oluştu. Uygulama kapatılacak.</string>
+    <string name="db_not_created">Veritabanı oluşturulamadı. Uygulama kapatılacak. Tekrar başlatmayı deneyin.</string>
+    <string name="splash_text">Uygulama ilk kullanım için hazırlanıyor.Lütfen bekleyin</string>
+    <string name="no_lists_added">Hiç listeniz yok.\n Liste eklemek için ekleme düğmesine dokunun</string>
+
+    <string name="add_list_fragment_tag">Yeni Liste Oluştur</string>
+    <string name="add_list_fragmet_hint_text">Liste Adı Girin (Örn: Market)</string>
+    <string name="edit_listname_fragment_tag">Liste Adını Değiştirin</string>
+    <string name="already_present_tobuylist">Bu isimli bir liste zaten var: <big>%1$s</big>\nYeni bir liste adı girmek ister misiniz\?</string>
+
+    <string name="action_add">Ekle</string>
+    <string name="action_settings">Ayarlar</string>
+    <string name="action_cancel">İptal</string>
+    <string name="title_activity_delete">Sil</string>
+    <string name="alert_dialog_OK_button_text">Tamam</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+
+    <string name="list_items_count_text">%1$d kalem</string>
+</resources>
